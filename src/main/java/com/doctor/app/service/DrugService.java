@@ -8,6 +8,8 @@ public interface DrugService {
 	
 	List<Drug> getAllDrugs();
 	
+	List<Drug> getDrugsByForm(String form);
+	
 	String updateDrugList();
 	
 	String sayHello();

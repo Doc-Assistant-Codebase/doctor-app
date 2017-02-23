@@ -33,6 +33,11 @@ public class DrugServiceImpl implements DrugService {
 	}
 
 	@Override
+	public List<Drug> getDrugsByForm(String form) {
+		return drugDao.getDrugsByForm(form);
+	}
+
+	@Override
 	public String updateDrugList() {
 		try {
 			List<Drug> drugList = new ArrayList<Drug>();
