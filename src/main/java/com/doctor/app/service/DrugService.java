@@ -8,7 +8,7 @@ public interface DrugService {
 	
 	List<Drug> getAllDrugs();
 	
-	void updateDrugList();
+	String updateDrugList();
 	
 	String sayHello();
 	

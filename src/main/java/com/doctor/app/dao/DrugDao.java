@@ -8,7 +8,7 @@ public interface DrugDao {
 	
 	List<Drug> getAllDrugs();
 	
-	void updateDrugList();
+	void updateDrugList(List<Drug> drugs);
 	
 	String sayHello();
 	

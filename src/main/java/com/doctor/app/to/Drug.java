@@ -7,14 +7,16 @@ import javax.persistence.Id;
 
 @Entity
 public class Drug {
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id 
 	private Long medicineId;
 	private String drugForm;
 	private String tradeName;
-	private int strength;
-	private int frequency;
-	private int duration;
+	private double strength;
+	private double frequency;
+	private double duration;
 	private String instructions;
+	
+	public Drug() { }
 	
 	public Drug(Long medicineId, String drugForm, String tradeName, int strength, int frequency, int duration,
 			String instructions) {
@@ -46,22 +48,22 @@ public class Drug {
 	public void setTradeName(String tradeName) {
 		this.tradeName = tradeName;
 	}
-	public int getStrength() {
+	public double getStrength() {
 		return strength;
 	}
-	public void setStrength(int strength) {
+	public void setStrength(double strength) {
 		this.strength = strength;
 	}
-	public int getFrequency() {
+	public double getFrequency() {
 		return frequency;
 	}
-	public void setFrequency(int frequency) {
+	public void setFrequency(double frequency) {
 		this.frequency = frequency;
 	}
-	public int getDuration() {
+	public double getDuration() {
 		return duration;
 	}
-	public void setDuration(int duration) {
+	public void setDuration(double duration) {
 		this.duration = duration;
 	}
 	public String getInstructions() {
