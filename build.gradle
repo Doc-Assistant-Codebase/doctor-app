@@ -10,6 +10,7 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'war'
 apply plugin: 'org.springframework.boot'
 
 jar {
@@ -17,8 +18,15 @@ jar {
     version =  '0.1'
 }
 
+war {
+    baseName = 'doctor-app-war'
+    version =  '0.1'
+}
+
 repositories {
     mavenCentral()
+    jcenter()
+    maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 sourceCompatibility = 1.8
@@ -33,6 +41,7 @@ dependencies {
     compile "org.hibernate:hibernate-core:4.3.8.Final"
     compile "org.hibernate:hibernate-validator:4.3.1.Final"
     compile "javax.validation:validation-api:1.0.0.GA"
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
     compile group: 'org.apache.poi', name: 'poi', version: '3.14'
     compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.14'
